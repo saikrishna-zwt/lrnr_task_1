@@ -26,7 +26,6 @@ const App = () => {
                 <Route index element={<> <Home /></>}></Route>
                 <Route path="/:parent/:child" element={<Component />}></Route>
                 <Route path="/:parent" element={<Sublime />}></Route>
-
               </Routes>
             </Content>
           </Layout>

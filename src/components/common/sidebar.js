@@ -194,7 +194,10 @@ const Sidebar = ({ collapsed }) => {
                       })}
                     </Menu.SubMenu>
                   ) : (
-                    <Menu.Item onClick={() =>handleNavigate(ele.key)} className="submenu">
+                    <Menu.Item
+                      onClick={() => handleNavigate(ele.key)}
+                      className="submenu"
+                    >
                       <div style={{ display: "flex", alignItems: "center" }}>
                         <div>{ele.title}</div>
                         <div style={{ padding: "24px" }} className="hoverClass">

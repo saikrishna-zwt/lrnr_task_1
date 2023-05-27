@@ -4,9 +4,10 @@ import TextEditor from "./pages/textEditor";
 
 function Component() {
   const { parent = "", child = "" } = useParams();
+  console.log(child,"Child")
   return (
     <>
-      {parent === "Container1" && child === "WSIWYG Text Editer" ? (
+      {parent === "Collection1" && child === "WSIWYG Text Editer" ? (
         <TextEditor />
       ) : (
         <div className="bgContainerParent">
