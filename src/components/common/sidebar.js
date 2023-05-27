@@ -110,7 +110,6 @@ const Sidebar = ({ collapsed }) => {
       return j;
     });
     setMenuList([...filterSet]);
-    console.log(filterSet, "filterSet");
   };
 
   return (

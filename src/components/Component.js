@@ -4,7 +4,6 @@ import TextEditor from "./pages/textEditor";
 
 function Component() {
   const { parent = "", child = "" } = useParams();
-  console.log(child,"Child")
   return (
     <>
       {parent === "Collection1" && child === "WSIWYG Text Editer" ? (
