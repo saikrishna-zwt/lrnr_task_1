@@ -12,6 +12,7 @@ const TextEditor = () => {
     };
   
   return (
+    
     <div style={{margin:"40px"}}>
        <div style={{marginBottom:"20px"}}> Text TextEditor </div>
        <ReactQuill style={{backgroundColor:"white", height:"500px", fontSize:"25px", borderRadius:"4px"}} value={editorContent} onChange={handleEditorChange} />

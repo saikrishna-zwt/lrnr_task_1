@@ -1,4 +1,3 @@
-
 import ReactApexChart from "react-apexcharts";
 import { Typography } from "antd";
 import { MinusOutlined } from "@ant-design/icons";
@@ -12,9 +11,7 @@ function LineChart() {
       <div className="linechart">
         <div>
           <Title level={5}>Total Timesheetwork</Title>
-          <Paragraph className="lastweek">
-            than last week 
-          </Paragraph>
+          <Paragraph className="lastweek">than last week</Paragraph>
         </div>
         <div className="sales">
           <ul>

@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 import { Layout, theme } from "antd";
-import Topbar from "./components/common/header";
 import Sidebar from "./components/common/sidebar";
-import { Route, Routes } from "react-router-dom";
-import Component from "./components/Component";
+import Topbar from "./components/common/header";
 import Home from "./components/pages/home";
-import Sublime from "./components/Sublime";
-const { Header, Content } = Layout;
+import { Route, Routes } from "react-router-dom";
+import TextEditor from "./components/pages/textEditor";
 
-const App = () => {
+const { Header, Content } = Layout;
+function App() {
   const [collapsed, setCollapsed] = useState(true);
   const {
     token: { colorBgContainer },
   } = theme.useToken();
+
   return (
-    <>
+  <>
       <Layout className="layout">
         <Topbar setCollapsed={setCollapsed} />
         <Layout style={{ minHeight: "100vh" }}>
@@ -24,8 +24,9 @@ const App = () => {
             <Content>
               <Routes>
                 <Route index element={<> <Home /></>}></Route>
-                <Route path="/:parent/:child" element={<Component />}></Route>
-                <Route path="/:parent" element={<Sublime />}></Route>
+                <Route path="/textEditor" element={<> <TextEditor /></>}></Route>
+                {/* <Route path="/:parent/:child" element={<Component />}></Route>
+                <Route path="/:parent" element={<Sublime />}></Route> */}
               </Routes>
             </Content>
           </Layout>
@@ -33,6 +34,6 @@ const App = () => {
       </Layout>
     </>
   );
-};
+}
 
 export default App;

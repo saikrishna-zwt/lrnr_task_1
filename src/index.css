@@ -124,7 +124,7 @@ aside.ant-layout-sider.ant-layout-sider-dark.ant-layout-sider-collapsed.ant-layo
 .ant-layout .ant-layout-sider-children {
   height: 100%;
   padding-top: 0.1px;
-  border: 1px solid;
+  /* border: 1px solid; */
   border-radius: 3px;
   border-color: silver;
 }
@@ -463,5 +463,56 @@ span.ismobile {
   color: #8c8c8c;
   font-weight: 700;
   background-color: transparent;
+
   font-size: 12px;
+}
+
+.menuListSection {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+
+.menuListSection:hover {
+  /* background-color: #49c4ee; */
+  border-radius: 5px;
+  cursor:pointer;
+
+}
+
+.menuListSection:hover .showPlusOutlined {
+      display: block;
+
+}
+
+
+
+.menuListLengthContainer{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.addDeleteContainer{
+  display: flex;
+}
+
+.menuListContainer{
+  display:flex;
+  align-items: center;
+
+}
+
+
+.showPlusOutlined {
+  display: none;
+}
+
+
+.sideBarContainer{
+  overflow: auto;
+  white-space: nowrap;
 }

@@ -6,19 +6,19 @@ import {
   BellOutlined,
 } from "@ant-design/icons";
 import React from "react";
-import ProfileMenu from "./profileMenu";
+import ProfileMenu from "./commonSubComponents/profileMenu";
 import { Link } from "react-router-dom";
+
 const { Header } = Layout;
 
 const Topbar = ({ setCollapsed, hiddenmenu }) => {
-
   const openNotification = () => {
     notification.open({
       message: "Notification Title",
       description:
         "This is the content of the notification. This is the content of the notification. This is the content of the notification.",
       onClick: () => {
-        // console.log("Notification Clicked!");
+        console.log("Notification Clicked!");
       },
     });
   };
@@ -41,12 +41,16 @@ const Topbar = ({ setCollapsed, hiddenmenu }) => {
         className="site-layout-background bg-2c2c2c"
       >
         <div
-          style={{ display: "flex", msFlexDirection:"row", alignItems: "center" }}
+          style={{ display: "flex", alignItems: "center" }}
           className="topbar-left-side"
         >
-          <Link to="/" style={{all:"unset", cursor:"pointer"}}>
-            <img style={{height:"30px",marginRight:"30px",marginTop:"29px"}} alt="" src="https://useaxentix.com/2.1.x/img/axentix.svg" />
-            </Link>
+          <Link to="/" style={{ all: "unset", cursor: "pointer" }}>
+            <img
+              style={{ height: "30px", marginRight: "30px", marginTop: "29px" }}
+              alt=""
+              src="https://useaxentix.com/2.1.x/img/axentix.svg"
+            />
+          </Link>
           <span
             style={{ color: "black",cursor:"pointer" }}
             className="sidebar-menu-icon"
@@ -58,6 +62,13 @@ const Topbar = ({ setCollapsed, hiddenmenu }) => {
           </span>
         </div>
         <div className="topbar-right-side">
+        <div className="notification">
+          <Link  to="textEditor">
+            <button style={{cursor:"pointer"}} className="buttonStyleCrewMember">
+                Text Editor
+            </button>
+            </Link>
+          </div>
           <div className="notification">
             <button className="buttonStyleCrewMember">
               <PlusOutlined /> Invite Crew Member
